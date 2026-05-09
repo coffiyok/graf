@@ -4,7 +4,7 @@ public class Vertex {
     private Vertex(int id) {
         this.id = id;
     }
-    private int getId() {
+    int getId() {
         return id;
     }
     @Override
