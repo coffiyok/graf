@@ -1,4 +1,7 @@
 import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Graph {
 
@@ -35,5 +38,59 @@ public class Graph {
             }
             System.out.println();
         }
+    }
+    // BFS
+    public void bfs(int startId) {
+        if (!vertices.containsKey(startId)) return;
+
+        Set<Integer> visited = new HashSet<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        visited.add(startId);
+        queue.add(startId);
+
+        System.out.print("BFS Traversal: ");
+        while (!queue.isEmpty()) {
+            int currentId = queue.poll();
+            System.out.print(currentId + " ");
+
+            for (Edge edge : adjList.get(currentId)) {
+                int neighbor = edge.getDestination().getId();
+                if (!visited.contains(neighbor)) {
+                    visited.add(neighbor);
+                    queue.add(neighbor);
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    //  DFS
+    public void dfs(int startId) {
+        if (!vertices.containsKey(startId)) return;
+
+        Set<Integer> visited = new HashSet<>();
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(startId);
+
+        System.out.print("DFS Traversal: ");
+        while (!stack.isEmpty()) {
+            int currentId = stack.pop();
+
+            if (!visited.contains(currentId)) {
+                System.out.print(currentId + " ");
+                visited.add(currentId);
+                x
+                List<Edge> neighbors = adjList.get(currentId);
+                for (int i = neighbors.size() - 1; i >= 0; i--) {
+                    int neighbor = neighbors.get(i).getDestination().getId();
+                    if (!visited.contains(neighbor)) {
+                        stack.push(neighbor);
+                    }
+                }
+            }
+        }
+        System.out.println();
     }
 }
