@@ -23,3 +23,17 @@ This project implements a directed graph using an Adjacency List
 * **Steps:** Uses a stack. Push start node -> pop node -> push unvisited neighbors -> repeat
 * **Complexity:** O(V + E)
 * **Use Case:** Detecting cycles or solving puzzles like mazes
+
+## D. Experimental Results
+
+### Execution Time Comparison:
+
+| Graph Size | BFS Execution Time (ns) | DFS Execution Time (ns) |
+| :--- | :--- | :--- |
+| **10 Vertices** | 1,204,200 | 1,721,200 |
+| **30 Vertices** | 954,800 | 791,300 |
+| **100 Vertices** | 1,811,900 | 2,040,500 |
+
+### Observations and Patterns:
+* **Performance:** As the graph size increases, the execution time generally grows, which is consistent with the $O(V + E)$ complexity
+* **Efficiency:** In the small and large graph tests, BFS showed slightly different performance compared to DFS, likely due to the random structure of edges
