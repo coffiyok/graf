@@ -81,7 +81,6 @@ public class Graph {
             if (!visited.contains(currentId)) {
                 System.out.print(currentId + " ");
                 visited.add(currentId);
-                x
                 List<Edge> neighbors = adjList.get(currentId);
                 for (int i = neighbors.size() - 1; i >= 0; i--) {
                     int neighbor = neighbors.get(i).getDestination().getId();

@@ -35,6 +35,19 @@ public class Experiment {
         }
         return g;
     }
+    public void runTraversals(Graph g, int startId) {
+        // Тест BFS
+        long startBFS = System.nanoTime();
+        g.bfs(startId);
+        long endBFS = System.nanoTime();
 
+        // Тест DFS
+        long startDFS = System.nanoTime();
+        g.dfs(startId);
+        long endDFS = System.nanoTime();
+
+        System.out.println("BFS Execution Time: " + (endBFS - startBFS) + " ns");
+        System.out.println("DFS Execution Time: " + (endDFS - startDFS) + " ns");
+    }
 
 }
