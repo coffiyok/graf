@@ -27,6 +27,7 @@ This project implements a directed graph using an Adjacency List
 ## D. Experimental Results
 
 ### Execution Time Comparison:
+* https://github.com/coffiyok/graf/blob/6a514818f2ace3fde1a4d4b50c0f26f29555db19/screenshot.png
 
 | Graph Size | BFS Execution Time (ns) | DFS Execution Time (ns) |
 | :--- | :--- | :--- |
