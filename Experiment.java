@@ -3,7 +3,7 @@ import java.util.Random;
 public class Experiment {
 
     public void runMultipleTests() {
-        int[] sizes = {10, 30, 100}; // Размеры из задания [cite: 75]
+        int[] sizes = {10, 30, 100};
 
         for (int size : sizes) {
             System.out.println("\n--- Testing Graph with " + size + " vertices ---");
